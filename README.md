@@ -1,2 +1,2 @@
 # cucu
-a lazy cucu on teensy 4.0 and audio shield
+Lazy and childish cucu on teensy 4.0 and audio shield
