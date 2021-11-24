@@ -1,4 +1,16 @@
-
+// ***************************************
+//
+// A small lazy cucu for teensy 4.0 and audio shield
+//
+// Celesta's sounds come from Felt Instruments Helenka VST
+//
+// small tunes are short improvisations by Francesco Ganassin
+// played on a foggy evening of November
+// at home, in Rovigo, Veneto, Italy
+//
+//
+// ***************************************
+ 
 #include <Audio.h>
 #include <Wire.h>
 #include <SPI.h>
@@ -10,7 +22,6 @@ AudioOutputI2S           i2s1;           //xy=495,204
 AudioConnection          patchCord1(playSdWav1, 0, i2s1, 0);
 AudioConnection          patchCord2(playSdWav1, 1, i2s1, 1);
 AudioControlSGTL5000     sgtl5000_1;     //xy=629,310
-
 
 #define SDCARD_CS_PIN    10
 #define SDCARD_MOSI_PIN  7
@@ -38,39 +49,36 @@ void playFile(const char *filename)
 {
   Serial.print("Playing file: ");
   Serial.println(filename);
-
   playSdWav1.play(filename);
-
   delay(5);
 
   while (playSdWav1.isPlaying()) {
   }
 }
 
-
 void loop() {
-  playFile("001.WAV");  
-  delay(15000);
- playFile("002.WAV");
- delay(15000);
- playFile("003.WAV");
- delay(15000);
- playFile("04.WAV");
-  delay(15000);
+playFile("001.WAV");  
+ delay(18000);
+playFile("002.WAV");
+ delay(23000);
+playFile("003.WAV");
+ delay(19000);
+playFile("04.WAV");
+ delay(12000);
 playFile("005.WAV");
- delay(15000);
+ delay(19000);
 playFile("006.WAV");
  delay(15000);
 playFile("007.WAV");
- delay(15000);
+ delay(25000);
 playFile("008.WAV");
  delay(15000);
 playFile("009.WAV");
- delay(15000);
+ delay(11000);
 playFile("010.WAV");
- delay(15000);
+ delay(25000);
 playFile("011.WAV");
- delay(15000);
+ delay(22000);
 playFile("012.WAV");
  delay(15000);
 }
