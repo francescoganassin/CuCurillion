@@ -8,7 +8,6 @@
 // played on a foggy evening of November
 // at home, in Rovigo, Veneto, Italy
 //
-//
 // ***************************************
  
 #include <Audio.h>
@@ -58,27 +57,21 @@ void playFile(const char *filename)
 
 void loop() {
 playFile("001.WAV");  
- delay(18000);
+ delay(random(60000));
 playFile("002.WAV");
- delay(23000);
+ delay(random(60000));
 playFile("003.WAV");
- delay(19000);
-playFile("04.WAV");
- delay(12000);
+ delay(random(60000));
+playFile("004.WAV");
+ delay(random(60000));
 playFile("005.WAV");
- delay(19000);
+ delay(random(60000));
 playFile("006.WAV");
- delay(15000);
+ delay(random(60000));
 playFile("007.WAV");
- delay(25000);
+ delay(random(60000));
 playFile("008.WAV");
- delay(15000);
+ delay(random(60000));
 playFile("009.WAV");
- delay(11000);
-playFile("010.WAV");
- delay(25000);
-playFile("011.WAV");
- delay(22000);
-playFile("012.WAV");
- delay(15000);
+ delay(random(60000));
 }
